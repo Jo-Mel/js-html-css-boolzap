@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix {
+    content: '';
+    display: table;
+    clear: both
+}
+
+body {
+    background-color: #00bfa5;
+    /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+}
+
+.ctn {
+    width: 80%;
+    height: 100vh;
+    margin: 40px auto;
+    display: flex;
+    /* DA CANC */
+    border: 1px solid white;
+}
+
+.ctn-left {
+    height: 100%;
+    flex: 0 0 380px;
+    flex-direction: column;
+
+    /* da canc */
+    background-color: lightgrey;
+}
+
+.profile {
+    width: 100%;
+    height: 70px;
+    background-color: #ebedee;
+}
+
+.notifications {
+    width: 100%;
+    height: 80px;
+    background-color: #6bb5d8;
+}
+
+.search {
+    width: 100%;
+    height: 50px;
+    background-color: #ebedee;
+}
+
+.msg-list {
+    width: 100%;
+    height: calc(100% - 200px);
+    background-color: #fff;
+    overflow-y: scroll;
+}
+
+.ctn-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    /* da canc */
+    background-color: lightblue;
+}
+
+.contact {
+    width: 100%;
+    height: 70px;
+    background-color: #ebedee;
+    /* DA CANC */
+    border-left: 1px solid black;
+}
+
+.conv {
+    width: 100%;
+    height: calc(100% - 150px);
+    background-color: lightyellow;
+    overflow-y: scroll;
+}
+
+.type-msg {
+    width: 100%;
+    height: 80px;
+    background-color: #ebedee;
+}
