@@ -24,6 +24,18 @@ body {
     border: 1px solid white;
 }
 
+img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.icons i {
+    color: rgba(173,173,173,1);
+    padding-right: 12px;
+    font-size: 20px;
+}
+
 .ctn-left {
     height: 100%;
     flex: 0 0 380px;
@@ -37,18 +49,73 @@ body {
     width: 100%;
     height: 70px;
     background-color: #ebedee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .notifications {
     width: 100%;
     height: 80px;
     background-color: #6bb5d8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bell-icon i {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bell-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    color: #6bb5d8;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 15px;
+    position: relative;
+}
+
+.txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.txt .title {
+    font-size: 15px;
+}
+
+.txt .cta a {
+    color: white;
+    font-size: 13px;
 }
 
 .search {
     width: 100%;
     height: 50px;
     background-color: #ebedee;
+    color: grey;
+    line-height: 50px;
+    display: table;
+}
+
+#cerca {
+    margin-left: 10px;
+}
+
+#cerca input {
+    width: 90%;
+    padding: 4px;
+    border: none;
+    border-radius: 3px;
 }
 
 .msg-list {
@@ -56,6 +123,45 @@ body {
     height: calc(100% - 200px);
     background-color: #fff;
     overflow-y: scroll;
+}
+
+.chat,
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    padding-left: 8px;
+}
+
+.chat:hover {
+    background-color: #ebedee;
+    cursor: pointer;
+}
+
+.chat-right, 
+.top-right,
+.top-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.chat-left {
+    padding-right: 8px;
+    font-size: 12px;
+}
+
+.nome {
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 2px;
+}
+
+.preview {
+    color: grey;
+    font-size: 12px;
 }
 
 .ctn-right {
@@ -72,13 +178,21 @@ body {
     height: 70px;
     background-color: #ebedee;
     /* DA CANC */
-    border-left: 1px solid black;
+    border-left: 1px solid grey;
+}
+
+.contact .ultimo-accesso {
+    font-size: 14px;
 }
 
 .conv {
     width: 100%;
     height: calc(100% - 150px);
     background-color: lightyellow;
+    background-image: url('https://i.imgur.com/bc3eMdZ.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     overflow-y: scroll;
 }
 
@@ -86,4 +200,27 @@ body {
     width: 100%;
     height: 80px;
     background-color: #ebedee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: rgba(89,89,89,0.8);
+}
+
+.type-msg input {
+    flex: 1;
+    padding: 14px 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 4px;
+}
+
+.type-msg .fa-smile {
+    margin-left: 15px;
+}
+
+.type-msg .fa-paper-plane {
+    margin-right: 15px;
 }
