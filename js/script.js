@@ -14,7 +14,7 @@ $(document).ready(function () {
   //*** Funzioni ***//
   function sendMsg() {
     var now = new Date();
-    var time = now.getHours() + ":" + now.getMinutes();
+    var time = addZero(now.getHours()) + ":" + addZero(now.getMinutes());
 
     var value = $("#type").val(); // prendo il valore dal campo input
     $("#type").val("");
@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   function botMsg() {
     var now = new Date();
-    var time = now.getHours() + ":" + now.getMinutes();
+    var time = addZero(now.getHours()) + ":" + addZero(now.getMinutes());
 
     var clone = $(".template .msg-box").clone();
     clone.addClass("received");
@@ -39,5 +39,12 @@ $(document).ready(function () {
   function send() {
     sendMsg();
     setTimeout(botMsg, 2000);
+  }
+
+  function addZero(timenumber) {
+    if (timenumber < 10) {
+      return (timenumber = "0" + timenumber);
+    }
+    return timenumber;
   }
 });
